@@ -1,6 +1,7 @@
 ﻿using CMSShoppingCart.Models.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,10 @@ namespace CMSShoppingCart.Models.ViewModels
 {
     public class PagesVM
     {
+        public PagesVM()
+        {
 
+        }
         public PagesVM(PagesDTO row)
         {
             this.Id = row.Id;
@@ -21,14 +25,14 @@ namespace CMSShoppingCart.Models.ViewModels
 
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(50,MinimumLength = 2)]
         public string Title { get; set; }
-
         public string Slug { get; set; }
-
+        [Required]
+        [StringLength(50, MinimumLength = 2)]
         public string Body { get; set; }
-
         public int Sorting { get; set; }
-
         public bool HasSideBar { get; set; }
 
     }

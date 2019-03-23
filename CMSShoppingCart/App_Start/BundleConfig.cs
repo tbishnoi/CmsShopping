@@ -15,8 +15,8 @@ namespace CMSShoppingCart
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-                        "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/bootstrap.js"));
+            "~/Scripts/jquery-{version}.js",
+            "~/Scripts/bootstrap.js"));
 
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -29,7 +29,7 @@ namespace CMSShoppingCart
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
         }
     }
 }

@@ -8,6 +8,10 @@ namespace CMSShoppingCart.Models.Data
 {
     public class Db : DbContext
     {
+        public DbSet<PagesDTO> Pages { get; set; }
 
+        public DbSet<SidebarDTO> Sidebar { get; set; }
+
+        public System.Data.Entity.DbSet<CMSShoppingCart.Models.ViewModels.PagesVM> PagesVMs { get; set; }
     }
 }
