@@ -5,7 +5,7 @@
 
 <h2>AddPage</h2>
 
-@if(TempData["SM"]!= null)
+@if (TempData["SM"] != null)
 {
     <div class="alert alert-success">
         @TempData["SM"]
@@ -13,10 +13,10 @@
 }
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>PagesDTO</h4>
         <hr />
@@ -68,3 +68,16 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
+@section Scripts{
+
+
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace("Body");
+    </script>
+
+
+}

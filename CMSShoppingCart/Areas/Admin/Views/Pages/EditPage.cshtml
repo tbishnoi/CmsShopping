@@ -43,7 +43,7 @@
                 }
                 else
                 {
-                    @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control"} })
+                    @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
                 }
 
 
@@ -80,3 +80,16 @@
 <div>
     @Html.ActionLink("Back to Pages", "Index")
 </div>
+
+
+@section Scripts{
+
+
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace("Body");
+    </script>
+
+
+}

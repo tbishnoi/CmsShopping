@@ -166,6 +166,7 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
                 dto.Title = model.Title;
                 dto.HasSideBar = model.HasSideBar;
                 dto.Slug = model.Slug;
+                dto.Body = model.Body;
 
              
                 db.SaveChanges();
@@ -255,6 +256,25 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
 
 
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult EditSidebar( SidebarVM model)
+        {
+            using(Db db =new Db())
+            {
+
+                SidebarDTO dto = db.Sidebar.Find(1);
+
+
+                dto.Body = model.Body;
+
+                db.SaveChanges();
+            }
+
+            TempData["SM"] = " You have edited the sidebar";
+
+            return RedirectToAction("EditSidebar");
         }
 
 

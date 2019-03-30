@@ -13,5 +13,7 @@ namespace CMSShoppingCart.Models.Data
         public DbSet<SidebarDTO> Sidebar { get; set; }
 
         public System.Data.Entity.DbSet<CMSShoppingCart.Models.ViewModels.PagesVM> PagesVMs { get; set; }
+
+        public System.Data.Entity.DbSet<CMSShoppingCart.Models.ViewModels.Pages.SidebarVM> SidebarVMs { get; set; }
     }
 }
